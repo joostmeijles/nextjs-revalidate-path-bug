@@ -5,3 +5,7 @@ export async function middleware(request: NextRequest) {
 
     return NextResponse.rewrite(request.nextUrl);
 }
+
+export const config = {
+    matcher: '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
+}
